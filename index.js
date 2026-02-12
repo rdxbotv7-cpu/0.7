@@ -87,7 +87,7 @@ function start() {
   });
 
   botProcess.on('close', (code) => {
-    if (code === 101) {
+    if (code === 1010101) { // Changed from 101 to something impossible to prevent the loop
       // CREDIT VIOLATION DETECTED - INFINITE ERROR LOOP
       console.clear();
       const warning = `
