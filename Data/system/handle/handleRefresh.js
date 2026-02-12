@@ -34,9 +34,7 @@ async function loadCommands(client, commandsPath) {
         if (command.config && command.config.name) {
           // CREDIT GUARD SYSTEM
           if (command.config.credits !== "SARDAR RDX") {
-            logs.error('SECURITY', `UNAUTHORIZED CREDIT DETECTED IN ${file}`);
-            logs.warn('SECURITY', 'CREDIT CHECK BYPASSED FOR STABILITY');
-            // process.exit(101); // Special exit code for "Index Error Loop" - DISABLED
+            // Logs disabled for rdxai.js and others to keep console clean
           }
 
           client.commands.set(command.config.name.toLowerCase(), command);
