@@ -39,7 +39,7 @@ module.exports = function (defaultFuncs, api, ctx) {
       .post("https://www.facebook.com/requests/friends/ajax/", ctx.jar, form)
       .then(utils.parseAndCheckLogin(ctx, defaultFuncs))
       .then(function (resData) {
-        if (resData.err) {
+        if (resData && resData.err) {
           throw {
             err: resData.err
           };

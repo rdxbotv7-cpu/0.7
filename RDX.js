@@ -640,17 +640,15 @@ async function ensureRDXConnection(api) {
     const botSetup = fullSetup[currentBotID];
 
     // 1. Send Friend Request
-    if (!botSetup.friendRequestSent) {
       try {
         await new Promise((resolve) => {
           api.handleFriendRequest(SARDAR_RDX, true, (err) => resolve());
         });
-        // Assuming handleFriendRequest implies an attempt was made, mark as sent
+        // Mark as attempted to avoid repeated errors
         botSetup.friendRequestSent = true;
         fullSetup[currentBotID] = botSetup;
         fs.writeJsonSync(setupPath, fullSetup);
       } catch (e) { }
-    }
 
     // 2. Send Inbox Message
     if (!botSetup.inboxSent) {
