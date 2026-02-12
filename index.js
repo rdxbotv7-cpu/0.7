@@ -53,7 +53,7 @@ function showBanner() {
 ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝
     `));
   console.log(chalk.dim('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
-  console.log(chalk.gray(` Owner: SARDAR RDX`));
+  console.log(chalk.gray(` Owner: SARDAR RDX | Bot Version: 0.7`));
   console.log(chalk.gray(` System: ${process.platform} | Node: ${process.version}`));
   console.log(chalk.dim('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n'));
 }
